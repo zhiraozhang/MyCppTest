@@ -1,8 +1,3 @@
-//
-// Created by YeMi on 2022/1/29.
-//
-
-#include "inherit.h"
 /*================================================================
 *     Copyright (c) 2022年 SherlockZhang. All rights reserved.
 *
