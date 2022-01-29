@@ -1,31 +1,31 @@
 /*================================================================
-*     Copyright (c) 2022Äê SherlockZhang. All rights reserved.
+*     Copyright (c) 2022å¹´ SherlockZhang. All rights reserved.
 *
-*   ÎÄ¼şÃû³Æ£ºLinkListTest.cpp
-*   ´´ ½¨ Õß£ºSherlockZhang
-*   ÓÊ    Ïä£ºSherlockZhang@aliyun.com
-*   ´´½¨ÈÕÆÚ£º2021Äê01ÔÂ28ÈÕ
-*   Ãè    Êö£ºÁ´±í
+*   æ–‡ä»¶åç§°ï¼šLinkListTest.cpp
+*   åˆ› å»º è€…ï¼šSherlockZhang
+*   é‚®    ç®±ï¼šSherlockZhang@aliyun.com
+*   åˆ›å»ºæ—¥æœŸï¼š2021å¹´01æœˆ28æ—¥
+*   æ    è¿°ï¼šé“¾è¡¨
 *
 #pragma once
 ================================================================*/
 #include<iostream>
 using namespace std;
 
-//¶¨Òå
+//å®šä¹‰
 typedef struct LNode
 {
 	int data;
 	LNode* next;
 }*LinkList;
-//ÎŞÂÛÊÇÍ·²å·¨»¹ÊÇÎ²²å·¨¶¼»áÓĞÒ»¸öÊ²Ã´ÄØ£¿¶¼»áÓĞÒ»¸öÍ·½Úµã
-//Í·²å·¨
+//æ— è®ºæ˜¯å¤´æ’æ³•è¿˜æ˜¯å°¾æ’æ³•éƒ½ä¼šæœ‰ä¸€ä¸ªä»€ä¹ˆå‘¢ï¼Ÿéƒ½ä¼šæœ‰ä¸€ä¸ªå¤´èŠ‚ç‚¹
+//å¤´æ’æ³•
 LinkList HeadInsert(LinkList& L);
-//Î²²å·¨
+//å°¾æ’æ³•
 LinkList TailInsert(LinkList& L);
-//´òÓ¡Á´±í
+//æ‰“å°é“¾è¡¨
 void PrintLinkList(LinkList L);
-//»ñÈ¡µÚiÎ»µÄÖµ
+//è·å–ç¬¬iä½çš„å€¼
 LinkList GetElem(LinkList L, int i=3);
 
 int main2() 
@@ -34,10 +34,10 @@ int main2()
 	{
 		LinkList List1= new LNode;		// == LNode* List1 = new LNode;
 		LNode* List2 = new LNode;
-		//²âÊÔÍ·²å·¨
+		//æµ‹è¯•å¤´æ’æ³•
 		HeadInsert(List1);
 		PrintLinkList(List1);
-		//²âÊÔÎ²²å·¨
+		//æµ‹è¯•å°¾æ’æ³•
 		TailInsert(List2);
 		PrintLinkList(List2);
 		//GetElem(List1);
@@ -49,10 +49,10 @@ int main2()
 	}
 
 }
-//Í·²å·¨
+//å¤´æ’æ³•
 LinkList HeadInsert(LinkList& L)
 {
-	cout << "Í·²å·¨Æô¶¯£¬ÇëÊäÈëÖµ£º£¨ÊäÈë9999½áÊø£©";
+	cout << "å¤´æ’æ³•å¯åŠ¨ï¼Œè¯·è¾“å…¥å€¼ï¼šï¼ˆè¾“å…¥9999ç»“æŸï¼‰";
 	int x;
 	cin >> x;
 	L->next = NULL;
@@ -62,17 +62,17 @@ LinkList HeadInsert(LinkList& L)
 		s->data = x;
 		s->next = L->next;
 		L->next = s;
-		cout << "ÇëÊäÈëÏÂÒ»¸öÖµ: ";
+		cout << "è¯·è¾“å…¥ä¸‹ä¸€ä¸ªå€¼: ";
 		cin >> x;
 	}
 	return L;
 }
-//Î²²å·¨
+//å°¾æ’æ³•
 LinkList TailInsert(LinkList& L)
 {
 	int x;
 	LNode* Tail = L;
-	cout << "Î²²å·¨Æô¶¯£¬ÇëÊäÈëÖµ£º£¨ÊäÈë9999½áÊø£©";
+	cout << "å°¾æ’æ³•å¯åŠ¨ï¼Œè¯·è¾“å…¥å€¼ï¼šï¼ˆè¾“å…¥9999ç»“æŸï¼‰";
 	cin >> x;
 	while (x != 9999) {
 		LinkList s = new LNode;
@@ -80,18 +80,18 @@ LinkList TailInsert(LinkList& L)
 		s->next = NULL;
 		Tail->next = s;
 		Tail = s;
-		cout << "ÇëÊäÈëÏÂÒ»¸öÖµ: ";
+		cout << "è¯·è¾“å…¥ä¸‹ä¸€ä¸ªå€¼: ";
 		cin >> x;
 	}
 	Tail->next = NULL;
 	return L;
 }
-//´òÓ¡Á´±í
+//æ‰“å°é“¾è¡¨
 void PrintLinkList(LinkList L)
 {
 	try
 	{
-		cout << "Á´±íµÄÊı¾İÎª:";
+		cout << "é“¾è¡¨çš„æ•°æ®ä¸º:";
 		while (L->next)
 		{
 			cout << L->next->data << "->";
@@ -105,7 +105,7 @@ void PrintLinkList(LinkList L)
 	}
 
 }
-//°´ĞòºÅ²éÕÒ½ÚµãÖµ
+//æŒ‰åºå·æŸ¥æ‰¾èŠ‚ç‚¹å€¼
 LinkList GetElem(LinkList L, int i)
 {
 	if (i < 0)return NULL;
@@ -114,11 +114,11 @@ LinkList GetElem(LinkList L, int i)
 		i--;
 	}
 	if (L != NULL) {
-		cout <<"ÖµÎª"<< L->data;
+		cout <<"å€¼ä¸º"<< L->data;
 		return L;
 	}
 	else {
-		cout << "²»´æÔÚ" << endl;
+		cout << "ä¸å­˜åœ¨" << endl;
 		return NULL;
 	}
 	return L;

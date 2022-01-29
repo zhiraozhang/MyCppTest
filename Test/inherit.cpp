@@ -82,7 +82,7 @@ public:
         return name;
     }
 };
-int main()
+int main1()
 {
     cout << "---程序  start!---" << endl;
     //堆中分配

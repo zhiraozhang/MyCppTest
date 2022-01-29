@@ -1,7 +1,7 @@
 #include<iostream>
 #include<string>
 using namespace std;
-int main1() //ÈçÒªÔËĞĞÇëÈ¥³ımain
+int main() //å¦‚è¦è¿è¡Œè¯·å»é™¤main
 {
 	int hello(int i,string);
 	int hello(int *i,string);
@@ -10,26 +10,26 @@ int main1() //ÈçÒªÔËĞĞÇëÈ¥³ımain
 
 	int he = 1;
 	int* s = &he;
-	hello(s, "heµÄµØÖ·Îª£º");
+	hello(s, "heçš„åœ°å€ä¸ºï¼š");
 	search1(he);
-	hello(he,"heµÄÖµÎª£º");
-	search2(he);//search2ĞÎ²ÎÊÇÊµ²ÎµÄÒıÓÃ£¬ËùÒÔÊµ²Î»á±ä»¯£¬search1
-	hello(he,"heµÄÖµÎª£º");
+	hello(he,"heçš„å€¼ä¸ºï¼š");
+	search2(he);//search2å½¢å‚æ˜¯å®å‚çš„å¼•ç”¨ï¼Œæ‰€ä»¥å®å‚ä¼šå˜åŒ–ï¼Œsearch1
+	hello(he,"heçš„å€¼ä¸ºï¼š");
 
-	cout << "ÉÏº£¾ÍÊÇÆÖ¶«£¬ÆÖ¶«¾ÍÊÇÉÏº££¡" << endl;
+	cout << "ä¸Šæµ·å°±æ˜¯æµ¦ä¸œï¼Œæµ¦ä¸œå°±æ˜¯ä¸Šæµ·ï¼" << endl;
 	int a, b=1;
 	int* p = &a;
 	int* q = &b,*r=NULL;
 	
-	hello(p,"aµÄµØÖ·Îª£º");
-	hello(q,"bµÄµØÖ·Îª£º");
-	int& c = b;	//cÊÇbµÄÒıÓÃ
-	hello(c,"cµÄÖµÎª£º");//´Ë´¦cµÄµØÖ·ÊÇb£¬ËùÒÔÉÏº£¾ÍÊÇÆÖ¶«£¬ÆÖ¶«¾ÍÊÇÉÏº£
+	hello(p,"açš„åœ°å€ä¸ºï¼š");
+	hello(q,"bçš„åœ°å€ä¸ºï¼š");
+	int& c = b;	//cæ˜¯bçš„å¼•ç”¨
+	hello(c,"cçš„å€¼ä¸ºï¼š");//æ­¤å¤„cçš„åœ°å€æ˜¯bï¼Œæ‰€ä»¥ä¸Šæµ·å°±æ˜¯æµ¦ä¸œï¼Œæµ¦ä¸œå°±æ˜¯ä¸Šæµ·
 	b++;
-	hello(c,"b+1ºócµÄÖµÎª£º");
+	hello(c,"b+1åcçš„å€¼ä¸ºï¼š");
 	r = &c;
-	hello(q,"bµÄµØÖ·Îª£º");
-	hello(r,"cµÄµØÖ·Îª£º");//ÉõÖÁÓÚbºÍcµÄµØÖ·¶¼ÊÇÒ»ÑùµÄ
+	hello(q,"bçš„åœ°å€ä¸ºï¼š");
+	hello(r,"cçš„åœ°å€ä¸ºï¼š");//ç”šè‡³äºbå’Œcçš„åœ°å€éƒ½æ˜¯ä¸€æ ·çš„
 	return 0;
 }
 int hello(int i,string j)
@@ -44,18 +44,18 @@ int hello(int* i, string j)
 }
 int search1(int i)
 {
-	cout << "search1Æô¶¯" << endl;
+	cout << "search1å¯åŠ¨" << endl;
 	++i;
 	int* p = &i;
-	hello(p,"search1Ö®ºóiµÄµØÖ·Îª");
-	cout << "search1½áÊø" << endl;
+	hello(p,"search1ä¹‹åiçš„åœ°å€ä¸º");
+	cout << "search1ç»“æŸ" << endl;
 	return 0;
 }
 void search2(int& i) 
 {
-	cout << "search2Æô¶¯(ÒıÓÃ)" << endl;
+	cout << "search2å¯åŠ¨(å¼•ç”¨)" << endl;
 	++i;
 	int* p = &i;
-	hello(p,"search2Ö®ºóiµÄµØÖ·Îª");
-	cout << "search2½áÊø" << endl;
+	hello(p,"search2ä¹‹åiçš„åœ°å€ä¸º");
+	cout << "search2ç»“æŸ" << endl;
 }
