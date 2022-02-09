@@ -1,7 +1,7 @@
 /*================================================================
 *     Copyright (c) 2022年 SherlockZhang. All rights reserved.
 *
-*   文件名称：LinkListTest.cpp
+*   文件名称：LinkList.cpp
 *   创 建 者：SherlockZhang
 *   邮    箱：SherlockZhang@aliyun.com
 *   创建日期：2021年01月28日
