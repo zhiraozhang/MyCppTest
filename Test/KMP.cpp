@@ -16,7 +16,7 @@ using namespace std;
 
 // 求next数组是不需要主字符串的，只需要匹配字符串
 // 说白了，next[]数组求的是匹配字符串的最大匹配数
-void getNext(const char *str, int next[])
+void getNext(const char* str, int next[])
 {
     int str_len = strlen(str);
     next[0] = -1;
@@ -28,19 +28,20 @@ void getNext(const char *str, int next[])
             i++;
             j++;
             next[i] = j;
-        } else j = next[j];
+        }
+        else j = next[j];
     }
     //cout << "next : " << next << endl;
 }
 
-int KMP(const char *mas_str, const char *ano_str)
+int KMP(const char* mas_str, const char* ano_str)
 {
     int mas_len = strlen(mas_str);
     int ano_len = strlen(ano_str);
 
     if (mas_len < ano_len) return -1;//主串长度少于匹配串
 
-    int *next = new int[ano_len];
+    int* next = new int[ano_len];
     getNext(ano_str, next);
     int i = 0, j = 0;
     while (i < mas_len && j < ano_len)
@@ -51,7 +52,7 @@ int KMP(const char *mas_str, const char *ano_str)
         {
             i++;
             j++;
-        } 
+        }
         else
         {
             j = next[j];
@@ -67,16 +68,16 @@ int KMP(const char *mas_str, const char *ano_str)
 
 int main()
 {
-    char *master_string = "abbaaabbaabaabbaaba";
-    char *another_string = "abbaaba";
+    const char* master_string = "abbaaabbaabaabbaaba";
+    const char* another_string = "abbaaba";
     cout << "KMP!";
     //cout << "KMP! Start!：" << endl;
     //cin >> master_string >> another_string;
     int kmp_return = KMP(master_string, another_string);
     if (kmp_return == -1) cout << "false" << endl;
-    else cout << "123" << kmp_return << endl;
-    delete master_string;
-    delete another_string;
+    else cout << kmp_return << endl;
+    //delete master_string;
+    //delete another_string;
     system("pause");
     return 0;
 }
