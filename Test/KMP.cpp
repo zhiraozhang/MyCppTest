@@ -33,21 +33,21 @@ void getNext(const char *str, int next[])
     //cout << "next : " << next << endl;
 }
 
-int KMP(const char *s, const char *t)
+int KMP(const char *mas_str, const char *ano_str)
 {
-    int s_len = strlen(s);
-    int t_len = strlen(t);
+    int mas_len = strlen(mas_str);
+    int ano_len = strlen(ano_str);
 
-    if (s_len < t_len) return -1;//主串长度少于匹配串
+    if (mas_len < ano_len) return -1;//主串长度少于匹配串
 
-    int *next = new int[t_len];
-    getNext(t, next);
+    int *next = new int[ano_len];
+    getNext(ano_str, next);
     int i = 0, j = 0;
-    while (i < s_len && j < t_len)
+    while (i < mas_len && j < ano_len)
     {
         // 匹配：则匹配下一个；直到有一个字符串走完
         // 不匹配：回退模式串的j指针，回退到模式串当前最长匹配字符串的位置。如果还不匹配则继续回退。
-        if (j == -1 || s[i] == t[j])
+        if (j == -1 || mas_str[i] == ano_str[j])
         {
             i++;
             j++;
@@ -59,7 +59,7 @@ int KMP(const char *s, const char *t)
     }
     //delete[] next;
     //j走完证明匹配上了，返回位置。否则就是失败
-    if (j >= t_len)
+    if (j >= ano_len)
         return i - j;
     else
         return -1;
@@ -67,7 +67,7 @@ int KMP(const char *s, const char *t)
 
 int main()
 {
-    char *master_string = "abbaaabbaaba";
+    char *master_string = "abbaaabbaabaabbaaba";
     char *another_string = "abbaaba";
     cout << "KMP!";
     //cout << "KMP! Start!：" << endl;
