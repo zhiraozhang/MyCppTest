@@ -1,7 +1,7 @@
 #include<iostream>
 #include<string>
 using namespace std;
-int main() //如要运行请去除main
+int main1() //如要运行请去除main
 {
 	int hello(int i,string);
 	int hello(int *i,string);
