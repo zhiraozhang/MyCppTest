@@ -5,7 +5,7 @@
 *   创 建 者：SherlockZhang
 *   邮    箱：SherlockZhang@aliyun.com
 *   创建日期：2021年02月11日
-*   描    述：KMP算法,书中都是从1开始,但是本程序中是以程序下标0开始,所以和书中数据差1
+*   描    述：KMP算法
 *
 #pragma once
 ================================================================*/
@@ -30,11 +30,12 @@ void getNext(const char *ano, int next[])
             next[i] = j;
         } else j = next[j];
     }
+    cout << "next数组为:";
     for (int k = 0; k < ano_len; ++k)
     {
-        cout<<next[k]<<" ";//输出next数组
+        cout << next[k] + 1 << " ";//书中都是从1开始,但是程序中是以程序下标0开始,所以和书中数据差1
     }
-    cout<<endl;
+    cout << endl;
 }
 
 int KMP(const char *mas_str, const char *ano_str)
