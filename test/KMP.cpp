@@ -27,7 +27,7 @@ void getNext(const char *ano, int next[])
         {
             i++;
             j++;
-            next[i] = j;
+            if (i < ano_len) next[i] = j;//防止数组下标越界
         } else j = next[j];
     }
     cout << "next数组为:";
