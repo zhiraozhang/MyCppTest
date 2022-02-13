@@ -7,7 +7,7 @@
 ### test文件夹
 
 1. linklist.cpp : 链表
-2. inherit.cpp
+2. inherit.cpp：继承
 3. reference.cpp
 4. KMP.cpp : KMP算法
-5. mysql.cpp
+5. mysql.cpp:c++读取mysql
