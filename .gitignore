@@ -2,6 +2,7 @@
 *.d
 build
 cmake-build-debug
+cmake-build-debug-mingw
 .idea
 .gitee
 .DS_Store
