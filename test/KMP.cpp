@@ -16,32 +16,36 @@ using namespace std;
 
 // 求next数组是不需要主字符串的，只需要匹配字符串
 // 说白了，next[]数组求的是匹配字符串的最大匹配数
-void getNext(const char* str, int next[])
+void getNext(const char *ano, int next[])
 {
-    int str_len = strlen(str);
+    int ano_len = strlen(ano);
     next[0] = -1;
     int i = 0, j = -1;
-    while (i < str_len)
+    while (i < ano_len)
     {
-        if (j == -1 || str[i] == str[j])
+        if (j == -1 || ano[i] == ano[j])
         {
             i++;
             j++;
-            next[i] = j;
-        }
-        else j = next[j];
+            if (i < ano_len) next[i] = j;//防止数组下标越界
+        } else j = next[j];
     }
-    //cout << "next : " << next << endl;
+    cout << "next数组为:";
+    for (int k = 0; k < ano_len; ++k)
+    {
+        cout << next[k] + 1 << " ";//书中都是从1开始,但是程序中是以程序下标0开始,所以和书中数据差1
+    }
+    cout << endl;
 }
 
-int KMP(const char* mas_str, const char* ano_str)
+int KMP(const char *mas_str, const char *ano_str)
 {
     int mas_len = strlen(mas_str);
     int ano_len = strlen(ano_str);
 
     if (mas_len < ano_len) return -1;//主串长度少于匹配串
 
-    int* next = new int[ano_len];
+    int *next = new int[ano_len];
     getNext(ano_str, next);
     int i = 0, j = 0;
     while (i < mas_len && j < ano_len)
@@ -52,8 +56,7 @@ int KMP(const char* mas_str, const char* ano_str)
         {
             i++;
             j++;
-        }
-        else
+        } else
         {
             j = next[j];
         }
@@ -68,16 +71,14 @@ int KMP(const char* mas_str, const char* ano_str)
 
 int main()
 {
-    const char* master_string = "abbaaabbaabaabbaaba";
-    const char* another_string = "abbaaba";
-    cout << "KMP!";
-    //cout << "KMP! Start!：" << endl;
-    //cin >> master_string >> another_string;
+    const char *master_string = "abbaaaabbaabaaaabababaaababaabaabaabbaaba";
+    const char *another_string = "ababaaababaa";
+    cout << "KMP! Start!" << endl;
     int kmp_return = KMP(master_string, another_string);
     if (kmp_return == -1) cout << "false" << endl;
-    else cout << kmp_return << endl;
+    else cout << "在第几个位置起匹配:" << kmp_return << endl;
     //delete master_string;
     //delete another_string;
-    system("pause");
+    //system("pause");
     return 0;
 }

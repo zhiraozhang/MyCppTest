@@ -11,7 +11,9 @@
 ================================================================*/
 #include<iostream>
 #include<string>
+
 using namespace std;
+
 class animal//基类
 {
 private:
@@ -20,35 +22,42 @@ public:
     int age;
     string name;
     string voice;
+
     animal()
     {
         cout << "---animal start---" << endl;
     }
+
     ~animal()
     {
         cout << "---animal close---" << endl;
     }
+
 protected:
     int pro_age;
 };
+
 class dog : public animal
 {
 public:
     int age;
     string name;
     string voice;
-    dog(string inputName,int inputAge)
+
+    dog(string inputName, int inputAge)
     {
         cout << "---dog    start---" << endl;
         voice = "woo~woo~";
         name = inputName;
         age = inputAge;
     }
+
     ~dog()
     {
         cout << "---dog    close---" << endl;
     }
 };
+
 class human : public animal
 {
 private :
@@ -68,6 +77,7 @@ public:
         cout << "---human  start---" << endl;
         age = 1;
     }
+
     ~human()
     {
         cout << "---human  close---" << endl;
@@ -77,21 +87,23 @@ public:
     {
         name = inputName;
     }
+
     string getName()
     {
         return name;
     }
 };
-int main1()
+
+int main()
 {
     cout << "---程序  start!---" << endl;
     //堆中分配
     cout << "堆中分配 start!" << endl;
-    human* zhang=new human;
+    human *zhang = new human;
     zhang->setName("三");
     cout << "张" << zhang->getName() << endl;
     delete zhang;
-    dog* hashiqi = new dog("哈士奇",1);
+    dog *hashiqi = new dog("哈士奇", 1);
     cout << "他家养了条" << hashiqi->name << endl;
     delete hashiqi;
     cout << "------------------" << endl;
@@ -100,7 +112,7 @@ int main1()
     human wang;
     wang.setName("五");
     cout << "王" << wang.getName() << endl;
-    dog jinmao("金毛",2);
+    dog jinmao("金毛", 2);
     cout << "他家养了条" << jinmao.name << endl;
     cout << "---程序  close!---" << endl;
     return 0;
