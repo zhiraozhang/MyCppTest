@@ -1,8 +1,10 @@
 # Prerequisites
 *.d
+build
 cmake-build-debug
 .idea
 .gitee
+.DS_Store
 
 # Compiled Object files
 *.slo
