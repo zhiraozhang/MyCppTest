@@ -27,13 +27,16 @@ void getNext(const char *ano, int next[])
         {
             i++;
             j++;
-            if (i < ano_len) next[i] = j;//防止数组下标越界
-        } else j = next[j];
+            if (i < ano_len)
+                next[i] = j; //防止数组下标越界
+        }
+        else
+            j = next[j];
     }
     cout << "next数组为:";
     for (int k = 0; k < ano_len; ++k)
     {
-        cout << next[k] + 1 << " ";//书中都是从1开始,但是程序中是以程序下标0开始,所以和书中数据差1
+        cout << next[k] + 1 << " "; //书中都是从1开始,但是程序中是以程序下标0开始,所以和书中数据差1
     }
     cout << endl;
 }
@@ -43,7 +46,8 @@ int KMP(const char *mas_str, const char *ano_str)
     int mas_len = strlen(mas_str);
     int ano_len = strlen(ano_str);
 
-    if (mas_len < ano_len) return -1;//主串长度少于匹配串
+    if (mas_len < ano_len)
+        return -1; //主串长度少于匹配串
 
     int *next = new int[ano_len];
     getNext(ano_str, next);
@@ -56,13 +60,14 @@ int KMP(const char *mas_str, const char *ano_str)
         {
             i++;
             j++;
-        } else
+        }
+        else
         {
             j = next[j];
         }
     }
-    //delete[] next;
-    //j走完证明匹配上了，返回位置。否则就是失败
+    // delete[] next;
+    // j走完证明匹配上了，返回位置。否则就是失败
     if (j >= ano_len)
         return i - j;
     else
@@ -75,10 +80,12 @@ int main()
     const char *another_string = "ababaaababaa";
     cout << "KMP! Start!" << endl;
     int kmp_return = KMP(master_string, another_string);
-    if (kmp_return == -1) cout << "false" << endl;
-    else cout << "在第几个位置起匹配:" << kmp_return << endl;
-    //delete master_string;
-    //delete another_string;
-    //system("pause");
+    if (kmp_return == -1)
+        cout << "false" << endl;
+    else
+        cout << "在第几个位置起匹配:" << kmp_return << endl;
+    // delete master_string;
+    // delete another_string;
+    // system("pause");
     return 0;
 }
