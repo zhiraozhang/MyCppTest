@@ -9,15 +9,16 @@
 *
 #pragma once
 ================================================================*/
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 
 using namespace std;
 
-class animal//基类
+class animal //基类
 {
 private:
     int pri_age;
+
 public:
     int age;
     string name;
@@ -60,10 +61,11 @@ public:
 
 class human : public animal
 {
-private :
+private:
     int age;
     string name;
     int weigh;
+
 public:
     enum sex
     {

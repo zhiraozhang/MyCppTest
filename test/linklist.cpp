@@ -9,7 +9,7 @@
 *
 #pragma once
 ================================================================*/
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -18,7 +18,7 @@ typedef struct LNode
 {
     int data;
     LNode *next;
-} *LinkList;
+} * LinkList;
 
 //无论是头插法还是尾插法都会有一个什么呢？都会有一个头节点
 //头插法
@@ -37,7 +37,7 @@ int main()
 {
     try
     {
-        LinkList List1 = new LNode;        // == LNode* List1 = new LNode;
+        LinkList List1 = new LNode; // == LNode* List1 = new LNode;
         LNode *List2 = new LNode;
         //测试头插法
         HeadInsert(List1);
@@ -45,14 +45,13 @@ int main()
         //测试尾插法
         TailInsert(List2);
         PrintLinkList(List2);
-        //GetElem(List1);
+        // GetElem(List1);
         return 0;
     }
     catch (const std::exception &)
     {
         cout << "ouch!" << endl;
     }
-
 }
 
 //头插法
@@ -112,13 +111,13 @@ void PrintLinkList(LinkList L)
     {
         cout << "haha";
     }
-
 }
 
 //按序号查找节点值
 LinkList GetElem(LinkList L, int i)
 {
-    if (i < 0)return NULL;
+    if (i < 0)
+        return NULL;
     while (L && i > 0)
     {
         L = L->next;
@@ -128,7 +127,8 @@ LinkList GetElem(LinkList L, int i)
     {
         cout << "值为" << L->data;
         return L;
-    } else
+    }
+    else
     {
         cout << "不存在" << endl;
         return NULL;
