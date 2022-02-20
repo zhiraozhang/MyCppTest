@@ -4,7 +4,6 @@ build
 cmake-build-debug
 cmake-build-debug-mingw
 .idea
-.vscode
 .DS_Store
 
 # Compiled Object files
