@@ -11,4 +11,6 @@
 3. reference.cpp
 4. KMP.cpp : KMP算法
 5. mysql.cpp:c++读取mysql
-6. mysql.cpp : c++链接mysql
+6. sort
+7. bubblesort
+8. pointer.cpp : 指针
