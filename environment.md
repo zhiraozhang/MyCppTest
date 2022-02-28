@@ -15,6 +15,8 @@
 
 ## 【可选】clang
 
+## 【可选】lldb
+
 ## 【可选】ninja
 
 ## 参考文章：[VS Code + clang + lldb - sinferwu - 博客园 (cnblogs.com)](https://www.cnblogs.com/sinferwu/p/15353427.html)
