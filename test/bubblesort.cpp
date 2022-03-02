@@ -12,23 +12,23 @@
 #include <iostream>
 using namespace std;
 
-void BubbleSort(int bubble_sort[])
+void BubbleSort(int sort[])
 {
     int k = 0;
-    for (int j = 9; j >= 0; j--) //第一轮，bubble_sort[9]是最大的，接下来找第二大的放到bubble_sort[8]里
+    for (int j = 9; j >= 0; j--) //第一轮，bsort[9]是最大的，接下来找第二大的放到bsort[8]里
     {
         for (int i = 0; i < j; i++) //两两比较，把最大的数放到最后
         {
-            if (bubble_sort[i] > bubble_sort[i + 1])
+            if (sort[i] > sort[i + 1])
             {
-                k = bubble_sort[i];
-                bubble_sort[i] = bubble_sort[i + 1];
-                bubble_sort[i + 1] = k;
+                k = sort[i];
+                sort[i] = sort[i + 1];
+                sort[i + 1] = k;
             }
         }
     }
 }
-void coutsort(int sort[], string text)
+void PrintSort(int sort[], string text)
 {
     cout << text;
     for (int i = 0; i < 10; i++)
@@ -40,9 +40,9 @@ void coutsort(int sort[], string text)
 
 int main()
 {
-    int sort[10] = {2, 4, 1, 5, 0, 8, 6, 9, 3, 7};
-    coutsort(sort, "冒泡排序前数组sort为");
-    BubbleSort(sort);
-    coutsort(sort, "冒泡排序后数组sort为");
+    int sort_array[10] = {2, 4, 1, 5, 0, 8, 6, 9, 3, 7};
+    PrintSort(sort_array, "冒泡排序前数组sort_array为：");
+    BubbleSort(sort_array);
+    PrintSort(sort_array, "冒泡排序后数组sort_array为：");
     return 0;
 }
