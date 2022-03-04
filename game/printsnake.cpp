@@ -1,9 +1,20 @@
-/*
-	×Ö·ûÆ´³ÉÓ¢ÎÄÍ¼°¸
-*/
+/*================================================================
+*     Copyright (c) 2022? SherlockZhang. All rights reserved.
+*
+*   ?????printsnake.cpp
+*   ? ? ??SherlockZhang
+*   ?    ??SherlockZhang@aliyun.com
+*   ?????2021?03?04?
+*   ?    ???????logo????
+*
+#pragma once
+================================================================*/
+
+#include <iostream>
+using namespace std;
+
 void printsnake()
 {
-	color(2);
 	printf("                                                                                         \n");
 	printf("                       __________       ___                                              \n");
 	printf("                      /          \\     / \\ \\    |____      __\\__                     \n");
@@ -18,4 +29,10 @@ void printsnake()
 	printf("                    \\  \\_______|  |  |  |    |  | | |__|  |   |     \\  |  ________/   \n");
 	printf("                     \\            /  |  |    |  |  \\       \\  |  |\\  \\  \\  \\____  \n");
 	printf("                      \\__________/   |__|    |__|   \\___/\\__\\ |__| \\__\\  \\______/ \n");
+}
+
+int main()
+{
+	printsnake();
+	return 0;
 }
