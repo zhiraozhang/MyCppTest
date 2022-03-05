@@ -13,5 +13,6 @@
 5. KMP.cpp : KMP算法
 6. mysql.cpp:c++读取mysql
 7. sort
-8. bubblesort
+8. bubblesort : 冒泡排序
 9. pointer.cpp : 指针
+10. quicksort.cpp : 快速排序
