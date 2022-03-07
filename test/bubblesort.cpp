@@ -10,6 +10,7 @@
 #pragma once
 ================================================================*/
 #include <iostream>
+#include "printarr.h"
 using namespace std;
 
 void BubbleSort(int sort[])
@@ -28,21 +29,12 @@ void BubbleSort(int sort[])
         }
     }
 }
-void PrintSort(int sort[], string text)
-{
-    cout << text;
-    for (int i = 0; i < 10; i++)
-    {
-        cout << sort[i] << " ";
-    }
-    cout << endl;
-}
 
 int main()
 {
     int sort_array[10] = {2, 4, 1, 5, 0, 8, 6, 9, 3, 7};
-    PrintSort(sort_array, "冒泡排序前数组sort_array为：");
+    PrintArr(sort_array, "冒泡排序前数组sort_array为：");
     BubbleSort(sort_array);
-    PrintSort(sort_array, "冒泡排序后数组sort_array为：");
+    PrintArr(sort_array, "冒泡排序后数组sort_array为：");
     return 0;
 }
