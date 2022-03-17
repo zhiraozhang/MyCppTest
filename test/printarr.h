@@ -1,5 +1,11 @@
 #pragma once
 #include <iostream>
+
+void PrintSherlock()
+{
+    std::cout << std::endl;
+}
+
 void PrintArr(int arr[], std::string text)
 {
     std::cout << text;
