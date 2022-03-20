@@ -1,10 +1,7 @@
 # Prerequisites
 *.dscode
 build
-cmake-build-debug
-cmake-build-debug-mingw
 .vscode
-.idea
 .DS_Store
 
 # Compiled Object files
