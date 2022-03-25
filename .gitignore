@@ -1,7 +1,6 @@
 # Prerequisites
 *.dscode
 build
-.vscode
 .DS_Store
 
 # Compiled Object files
