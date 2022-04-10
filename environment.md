@@ -7,7 +7,7 @@
 ## wsl安装后配置
 
 1. 换源
-2. gcc
+2. g++
 3. gdb
 4. cmake
 
@@ -21,7 +21,11 @@
 
 ## 【可选】ninja
 
+wsl安装ninja:
+
 ``sudo apt install ninja-build``
+
+vscode修改build改为ninja:
 
 `ctrl+,`之后搜索generator改为Ninja![1646545561557.png](image/environment/ninja.png)
 
