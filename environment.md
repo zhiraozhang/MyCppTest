@@ -6,10 +6,11 @@
 
 ## wsl安装后配置
 
-1. 换源
-2. g++
-3. gdb
-4. cmake
+1. vim
+2. 换源
+3. g++
+4. gdb
+5. cmake
 
 ## vscode安装后配置
 
