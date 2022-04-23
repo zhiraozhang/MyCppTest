@@ -2,6 +2,7 @@
 
 ## Only source files
 
+环境要求：无
 请自行编译并运行; )
 
 ### test文件夹
