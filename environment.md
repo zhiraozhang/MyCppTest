@@ -3,14 +3,13 @@
 [toc]
 
 ## wsl的安装
+1. 打开功能，启用wsl系统
+2. 去microsoft store搜索linux
+3. 选一个喜欢的下载，我选的是debian
 
 ## wsl安装后配置
-
-1. vim
-2. 换源
-3. g++
-4. gdb
-5. cmake
+1. 换源
+2. 安装必要软件`sudo apt install vim g++ gdb cmake'
 
 ## vscode安装后配置
 
