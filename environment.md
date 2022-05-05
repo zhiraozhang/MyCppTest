@@ -37,14 +37,14 @@ sudo apt update
 sudo apt upgrade
 ```
 
-2. 安装必要软件 `sudo apt install vim g++ gdb cmake`
+2. 安装必要软件 `sudo apt install g++ gdb cmake`
 
 ## vscode安装后配置
 
 ## 【可选】wsl安装其他软件
 
 ```
-sudo apt install htop openjdk-17-jdk manpages-zh git 
+sudo apt install vim htop openjdk-17-jdk manpages-zh git 
 ```
 
 ## 【可选】clang
