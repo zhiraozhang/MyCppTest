@@ -13,7 +13,7 @@
 #include "printarr.h"
 using namespace std;
 
-void BubbleSort(int sort[])
+void BubbleSort(int sort[]) //冒泡排序主体
 {
     int k = 0;
     for (int j = 9; j >= 0; j--) //第一轮，bsort[9]是最大的，接下来找第二大的放到bsort[8]里
@@ -21,7 +21,7 @@ void BubbleSort(int sort[])
         for (int i = 0; i < j; i++) //两两比较，把最大的数放到最后
         {
             if (sort[i] > sort[i + 1])
-            {
+             {
                 k = sort[i];
                 sort[i] = sort[i + 1];
                 sort[i + 1] = k;

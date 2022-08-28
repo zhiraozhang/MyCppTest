@@ -16,31 +16,25 @@ using namespace std;
 void QuickSort(int arr[], int left, int right)
 {
     if (arr == NULL)
-    {
         return;
-    }
     if (left >= right)
-    {
         return;
-    }
     int i = left;
     int j = right;
     int key = arr[left];
     while (1)
     {
-        while (arr[++i] < key)
+        while (arr[i] <= key)
         {
+            i++;
             if (i == right)
-            {
                 break;
-            }
         }
-        while (arr[--j] > key)
+        while (arr[j] >= key)
         {
+            j--;
             if (j == left)
-            {
                 break;
-            }
         }
         if (i >= j)
         {

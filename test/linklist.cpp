@@ -4,58 +4,25 @@
 *   文件名称：linklist.cpp
 *   创 建 者：SherlockZhang
 *   邮    箱：SherlockZhang@aliyun.com
-*   创建日期：2021年01月28日
+*   创建日期：2022年01月28日
 *   描    述：链表
 *
 #pragma once
 ================================================================*/
 #include <iostream>
 
+typedef int DataType;
 using namespace std;
 
-//定义
+//定义一个链表结构体，LNode是一个节点。LinkList是一个节点的首地址指针？
 typedef struct LNode
 {
-    int data;
+    DataType data;
     LNode *next;
 } * LinkList;
 
-//无论是头插法还是尾插法都会有一个什么呢？都会有一个头节点
 //头插法
-LinkList HeadInsert(LinkList &L);
-
-//尾插法
-LinkList TailInsert(LinkList &L);
-
-//打印链表
-void PrintLinkList(LinkList L);
-
-//获取第i位的值
-LinkList GetElem(LinkList L, int i = 3);
-
-int main()
-{
-    try
-    {
-        LinkList List1 = new LNode; // == LNode* List1 = new LNode;
-        LNode *List2 = new LNode;
-        //测试头插法
-        HeadInsert(List1);
-        PrintLinkList(List1);
-        //测试尾插法
-        TailInsert(List2);
-        PrintLinkList(List2);
-        // GetElem(List1);
-        return 0;
-    }
-    catch (const std::exception &)
-    {
-        cout << "ouch!" << endl;
-    }
-}
-
-//头插法
-LinkList HeadInsert(LinkList &L)
+LinkList HeadInsert(LinkList L)
 {
     cout << "头插法启动，请输入值：（输入9999结束）";
     int x;
@@ -63,7 +30,7 @@ LinkList HeadInsert(LinkList &L)
     L->next = NULL;
     while (x != 9999)
     {
-        LNode *s = new LNode;
+        LinkList s=new LNode;//存疑，LNode怎么用LinkList替换？
         s->data = x;
         s->next = L->next;
         L->next = s;
@@ -74,7 +41,7 @@ LinkList HeadInsert(LinkList &L)
 }
 
 //尾插法
-LinkList TailInsert(LinkList &L)
+LNode* TailInsert(LNode *L)
 {
     int x;
     LNode *Tail = L;
@@ -82,7 +49,7 @@ LinkList TailInsert(LinkList &L)
     cin >> x;
     while (x != 9999)
     {
-        LinkList s = new LNode;
+        LNode* s = new LNode;
         s->data = x;
         s->next = NULL;
         Tail->next = s;
@@ -134,4 +101,25 @@ LinkList GetElem(LinkList L, int i)
         return NULL;
     }
     return L;
+}
+
+int main()
+{
+    try
+    {
+        LNode *List1 = new LNode; // == LNode* List1 = new LNode;
+        LNode *List2 = new LNode;
+        //测试头插法
+        HeadInsert(List1);
+        PrintLinkList(List1);
+        //测试尾插法
+        TailInsert(List2);
+        PrintLinkList(List2);
+        // GetElem(List1);
+        return 0;
+    }
+    catch (const std::exception &)
+    {
+        cout << "ouch!" << endl;
+    }
 }
