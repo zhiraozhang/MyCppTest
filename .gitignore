@@ -2,7 +2,7 @@
 *.dscode
 build
 .DS_Store
-.vscode/*
+.vscode
 
 
 # Compiled Object files
