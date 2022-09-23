@@ -2,6 +2,8 @@
 *.dscode
 build
 .DS_Store
+.vscode/*
+
 
 # Compiled Object files
 *.slo
@@ -32,3 +34,4 @@ build
 *.exe
 *.out
 *.app
+.vscode/tasks.json
