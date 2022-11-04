@@ -34,7 +34,4 @@ build
 *.exe
 *.out
 *.app
-.vscode/tasks.json
-.vscode/c_cpp_properties.json
-.vscode/tasks.json
-.vscode/launch.json
+.vs
