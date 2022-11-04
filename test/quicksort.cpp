@@ -38,7 +38,7 @@ void QuickSort(int arr[], int left, int right)
         }
         if (i >= j)
         {
-            break;
+            break;//此处break是跳出while(1)这个循环
         }
         int temp = arr[i];
         arr[i] = arr[j];
@@ -52,9 +52,9 @@ void QuickSort(int arr[], int left, int right)
 
 int main()
 {
-    int sort_array[10] = {2, 4, 1, 5, 0, 8, 6, 9, 3, 7};
-    PrintArr(sort_array, "快速排序前数组sort_array为：");
+    int sort_array[10] = {6,1,2,5,9,3,4,7,10,8};
+    PrintArr(sort_array, "before quicksort sort_array is: ");
     QuickSort(sort_array, 0, 9);
-    PrintArr(sort_array, "快速排序后数组sort_array为：");
+    PrintArr(sort_array, "after quicksort sort_array is: ");
     return 0;
 }
