@@ -1,11 +1,11 @@
 /*================================================================
-*     Copyright (c) 2022? SherlockZhang. All rights reserved.
+*     Copyright (c) 2022年 SherlockZhang. All rights reserved.
 *
-*   ?????printsnake.cpp
-*   ? ? ??SherlockZhang
-*   ?    ??SherlockZhang@aliyun.com
-*   ?????2021?03?04?
-*   ?    ???????logo????
+*   文件名称：printsnake.cpp
+*   创 建 者：SherlockZhang
+*   邮    箱：SherlockZhang@aliyun.com
+*   创建日期：2021年02月23日
+*   描    述：打印snake
 *
 #pragma once
 ================================================================*/
