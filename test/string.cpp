@@ -19,4 +19,6 @@ int main()
 	str3 = str1 + str2;
 	std::cout << str3;
 	std::cout << R"+*(\a \n 在R"()"里面不会被转义)+*";
+	//对于C风格字符串使用strcpy strcat函数，包含在cstring头文件里。
+	//将一行读取到string里面，getline(cin,str}
 }
