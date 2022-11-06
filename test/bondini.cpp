@@ -10,6 +10,7 @@
 #pragma once
 ================================================================*/
 #include<iostream>
+#include<Windows.h>
 int main()
 {
 	using namespace std;
@@ -18,6 +19,7 @@ int main()
 	long code;
 	cin >> code;
 	cout << "\aYou entered " << code << "...\n";//\a是振铃，就是电脑发出提示音
+	Sleep(1000);
 	cout << "\aCode verified! Proceed with Plan Z3!\n";
 	return 0;
 }
