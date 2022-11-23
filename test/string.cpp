@@ -21,4 +21,7 @@ int main()
 	std::cout << R"+*(\a \n 在R"()"里面不会被转义)+*";
 	//对于C风格字符串使用strcpy strcat函数，包含在cstring头文件里。
 	//将一行读取到string里面，getline(cin,str}
+	char a[3] = { 0,1,2 };
+	std::cout << &a[0] << a[1] << std::endl;
+	return 0;
 }
