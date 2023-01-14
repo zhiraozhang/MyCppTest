@@ -2,8 +2,6 @@
 *.dscode
 build
 .DS_Store
-.vscode
-
 
 # Compiled Object files
 *.slo
