@@ -22,6 +22,7 @@ void Swap(T0& left, T0& right)
 	right = temp;
 }
 
+//类模板
 template<class T1,class T2>
 class Student
 {
@@ -43,6 +44,13 @@ private:
 	T1 _age;
 	T2 _height;
 };
+
+//可变模版参数
+template <class... T3>
+void Printargs(T3... args)
+{
+    cout << sizeof...(args) << endl; //打印变参的个数
+}
 
 int main()
 {
