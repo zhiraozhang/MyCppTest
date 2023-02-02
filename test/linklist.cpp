@@ -14,14 +14,14 @@
 typedef int DataType;
 using namespace std;
 
-//定义一个链表结构体，LNode是一个节点。LinkList是一个节点的首地址指针？
+// 定义一个链表结构体，LNode是一个节点。LinkList是一个节点的首地址指针？
 typedef struct LNode
 {
     DataType data;
     LNode *next;
-} * LinkList;
+} *LinkList;
 
-//头插法
+// 头插法
 LinkList HeadInsert(LinkList L)
 {
     cout << "头插法启动，请输入值：（输入9999结束）";
@@ -30,7 +30,7 @@ LinkList HeadInsert(LinkList L)
     L->next = NULL;
     while (x != 9999)
     {
-        LinkList s=new LNode;//存疑，LNode怎么用LinkList替换？
+        LinkList s = new LNode; // 存疑，LNode怎么用LinkList替换？
         s->data = x;
         s->next = L->next;
         L->next = s;
@@ -40,8 +40,8 @@ LinkList HeadInsert(LinkList L)
     return L;
 }
 
-//尾插法
-LNode* TailInsert(LNode *L)
+// 尾插法
+LNode *TailInsert(LNode *L)
 {
     int x;
     LNode *Tail = L;
@@ -49,7 +49,7 @@ LNode* TailInsert(LNode *L)
     cin >> x;
     while (x != 9999)
     {
-        LNode* s = new LNode;
+        LNode *s = new LNode;
         s->data = x;
         s->next = NULL;
         Tail->next = s;
@@ -61,7 +61,7 @@ LNode* TailInsert(LNode *L)
     return L;
 }
 
-//打印链表
+// 打印链表
 void PrintLinkList(LinkList L)
 {
     try
@@ -80,7 +80,7 @@ void PrintLinkList(LinkList L)
     }
 }
 
-//按序号查找节点值
+// 按序号查找节点值
 LinkList GetElem(LinkList L, int i)
 {
     if (i < 0)
@@ -109,10 +109,10 @@ int main()
     {
         LNode *List1 = new LNode; // == LNode* List1 = new LNode;
         LNode *List2 = new LNode;
-        //测试头插法
+        // 测试头插法
         HeadInsert(List1);
         PrintLinkList(List1);
-        //测试尾插法
+        // 测试尾插法
         TailInsert(List2);
         PrintLinkList(List2);
         // GetElem(List1);
