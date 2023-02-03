@@ -1,33 +1,33 @@
 /*================================================================
-*     Copyright (c) 2022Äê SherlockZhang. All rights reserved.
+*     Copyright (c) 2022å¹´ SherlockZhang. All rights reserved.
 *
-*   ÎÄ¼şÃû³Æ£ºtemplate.cpp
-*   ´´ ½¨ Õß£ºSherlockZhang
-*   ÓÊ    Ïä£ºSherlockZhang@aliyun.com
-*   ´´½¨ÈÕÆÚ£º20231Äê01ÔÂ30ÈÕ
-*   Ãè    Êö£ºÄ£°å·ÖÎªº¯ÊıÄ£°åºÍÀàÄ£°å
+*   æ–‡ä»¶åç§°ï¼štemplate.cpp
+*   åˆ› å»º è€…ï¼šSherlockZhang
+*   é‚®    ç®±ï¼šSherlockZhang@aliyun.com
+*   åˆ›å»ºæ—¥æœŸï¼š20231å¹´01æœˆ30æ—¥
+*   æ    è¿°ï¼šæ¨¡æ¿åˆ†ä¸ºå‡½æ•°æ¨¡æ¿å’Œç±»æ¨¡æ¿
 *
 #pragma once
 ================================================================*/
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 
-//º¯ÊıÄ£°å
-template<typename T0>
-void Swap(T0& left, T0& right)
+// å‡½æ•°æ¨¡æ¿
+template <typename T0>
+void Swap(T0 &left, T0 &right)
 {
 	T0 temp = left;
 	left = right;
 	right = temp;
 }
 
-//ÀàÄ£°å
-template<class T1,class T2>
+// ç±»æ¨¡æ¿
+template <class T1, class T2>
 class Student
 {
 public:
-	Student(const string& name, const string& sex, const T1& age, const T2& height)
+	Student(const string &name, const string &sex, const T1 &age, const T2 &height)
 	{
 		_name = name;
 		_sex = sex;
@@ -38,6 +38,7 @@ public:
 	{
 		cout << _name << " " << _sex << " " << _age << " " << _height << endl;
 	}
+
 private:
 	string _name;
 	string _sex;
@@ -45,23 +46,23 @@ private:
 	T2 _height;
 };
 
-//¿É±äÄ£°æ²ÎÊı
+// å¯å˜æ¨¡ç‰ˆå‚æ•°
 template <class... T3>
 void Printargs(T3... args)
 {
-    cout << sizeof...(args) << endl; //´òÓ¡±ä²ÎµÄ¸öÊı
+	cout << sizeof...(args) << endl; // æ‰“å°å˜å‚çš„ä¸ªæ•°
 }
 
 int main()
 {
-	//º¯ÊıÄ£°å
+	// å‡½æ•°æ¨¡æ¿
 	int a = 33;
 	int b = 22;
 	Swap(a, b);
-	//ÀàÄ£°å
+	// ç±»æ¨¡æ¿
 	Student<int, double> st1("Lily", "female", 25.06, 170.05);
-	//Student<double, int> st2 = new Student<double, int>("Sam", "male", 22.00, 182.00);
-	Student<double, int> st2("Sam","male",22.03,182.20);
+	// Student<double, int> st2 = new Student<double, int>("Sam", "male", 22.00, 182.00);
+	Student<double, int> st2("Sam", "male", 22.03, 182.20);
 	st1.PrintStu();
 	st2.PrintStu();
 	return 0;

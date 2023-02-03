@@ -1,27 +1,27 @@
 /*================================================================
-*     Copyright (c) 2022Äê SherlockZhang. All rights reserved.
+*     Copyright (c) 2022ï¿½ï¿½ SherlockZhang. All rights reserved.
 *
-*   ÎÄ¼þÃû³Æ£ºstring.cpp
-*   ´´ ½¨ Õß£ºSherlockZhang
-*   ÓÊ    Ïä£ºSherlockZhang@aliyun.com
-*   ´´½¨ÈÕÆÚ£º2022Äê11ÔÂ6ÈÕ
-*   Ãè    Êö£ºstringÀà
+*   ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½Æ£ï¿½string.cpp
+*   ï¿½ï¿½ ï¿½ï¿½ ï¿½ß£ï¿½SherlockZhang
+*   ï¿½ï¿½    ï¿½ä£ºSherlockZhang@aliyun.com
+*   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú£ï¿½2022ï¿½ï¿½11ï¿½ï¿½6ï¿½ï¿½
+*   ï¿½ï¿½    ï¿½ï¿½ï¿½ï¿½stringï¿½ï¿½
 *
 #pragma once
 ================================================================*/
-#include<iostream>
-#include<string>
+#include <iostream>
+#include <string>
 int main()
 {
 	std::string str1, str2, str3;
-	str1 = { "Let's go!" };
-	str2 = { "\aPikachu!\n"};
+	str1 = {"Let's go!"};
+	str2 = {"\aPikachu!\n"};
 	str3 = str1 + str2;
 	std::cout << str3;
-	std::cout << R"+*(\a \n ÔÚR"()"ÀïÃæ²»»á±»×ªÒå)+*";
-	//¶ÔÓÚC·ç¸ñ×Ö·û´®Ê¹ÓÃstrcpy strcatº¯Êý£¬°üº¬ÔÚcstringÍ·ÎÄ¼þÀï¡£
-	//½«Ò»ÐÐ¶ÁÈ¡µ½stringÀïÃæ£¬getline(cin,str}
-	char a[3] = { 0,1,2 };
+	std::cout << R"+*(\a \n ï¿½ï¿½R"()"ï¿½ï¿½ï¿½æ²»ï¿½á±»×ªï¿½ï¿½)+*";
+	// ï¿½ï¿½ï¿½ï¿½Cï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½strcpy strcatï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½cstringÍ·ï¿½Ä¼ï¿½ï¿½ï¡£
+	// ï¿½ï¿½Ò»ï¿½Ð¶ï¿½È¡ï¿½ï¿½stringï¿½ï¿½ï¿½æ£¬getline(cin,str}
+	char a[3] = {0, 1, 2};
 	std::cout << &a[0] << a[1] << std::endl;
 	return 0;
 }

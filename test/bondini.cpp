@@ -1,29 +1,29 @@
 /*================================================================
-*     Copyright (c) 2022Äê SherlockZhang. All rights reserved.
+*     Copyright (c) 2022å¹´ SherlockZhang. All rights reserved.
 *
-*   ÎÄ¼şÃû³Æ£ºbondini.cpp
-*   ´´ ½¨ Õß£ºSherlockZhang
-*   ÓÊ    Ïä£ºSherlockZhang@aliyun.com
-*   ´´½¨ÈÕÆÚ£º2021Äê11ÔÂ6ÈÕ
-*   Ãè    Êö£º×ªÒå
+*   æ–‡ä»¶åç§°ï¼šbondini.cpp
+*   åˆ› å»º è€…ï¼šSherlockZhang
+*   é‚®    ç®±ï¼šSherlockZhang@aliyun.com
+*   åˆ›å»ºæ—¥æœŸï¼š2021å¹´11æœˆ6æ—¥
+*   æ    è¿°ï¼šè½¬ä¹‰
 *
 #pragma once
 ================================================================*/
-#include<iostream>
-#include<Windows.h>
+#include <iostream>
+#include <Windows.h>
 int main()
 {
 	using namespace std;
 	cout << "\aOpeeration \"HyperHype\" is now activated!\n";
-	cout << "Enter your agent code:______\b\b\b\b\b\b";//\bÊÇ»ØÍË¹â±ê£¬´Ë´¦»á»ØÍËµ½ÏÂ»®Ïß¿ªÍ·
+	cout << "Enter your agent code:______\b\b\b\b\b\b"; //\bæ˜¯å›é€€å…‰æ ‡ï¼Œæ­¤å¤„ä¼šå›é€€åˆ°ä¸‹åˆ’çº¿å¼€å¤´
 	long code;
 	cin >> code;
-	cout << "\aYou entered " << code << "...\n";//\aÊÇÕñÁå£¬¾ÍÊÇµçÄÔ·¢³öÌáÊ¾Òô
+	cout << "\aYou entered " << code << "...\n"; //\aæ˜¯æŒ¯é“ƒï¼Œå°±æ˜¯ç”µè„‘å‘å‡ºæç¤ºéŸ³
 	Sleep(1000);
 	cout << "\aCode verified! Proceed with Plan Z3!\n";
 	return 0;
 }
-//int main()
+// int main()
 //{
 //	using namespace std;
 //	cout << "Opeeration \"HyperHype\" is now activated!\n";
@@ -33,4 +33,4 @@ int main()
 //	cout << "You entered " << code << "...\n";
 //	cout << "Code verified! Proceed with Plan Z3!\n";
 //	return 0;
-//}
+// }
