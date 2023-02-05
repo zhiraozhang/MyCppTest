@@ -38,17 +38,18 @@ public:
 	}
 	~Person()
 	{
-		if (m_Height != NULL)
-		{
-			delete m_Height;
-			m_Height = NULL;
-		}
+		//如果没有置空操作，类析构之后 下面的s指针也能指到 之前的的数据
+		//if (m_Height != NULL)
+		//{
+		//	delete m_Height;
+		//	m_Height = NULL;
+		//}
 		cout << "析构函数调用。" << endl;
 	}
 	int m_Age;
 	int* m_Height;
 };
-void test(int* &s)
+void test(int*& s)
 {
 	Person p1(13, 170);
 	cout << "p1年龄为" << p1.m_Age << "，p1身高为：" << *p1.m_Height << endl;
@@ -59,8 +60,8 @@ void test(int* &s)
 }
 int main()
 {
-	int* s=NULL;
+	int* s = NULL;
 	test(s);
-	cout << *s << endl;
+	cout << "s指向的p2.Height为：" << *s << endl;
 	return 0;
 }
