@@ -12,7 +12,12 @@
 #include <iostream>
 #include <Winsock.h>
 #include "inherit.cpp"
-#include "../include/mysql/jdbc.h"
+#include "../tools/mysqlcon8032/include/mysql/jdbc.h"
 
 #if 0
 #endif
+int main()
+{
+	MYSQL* con = mysql_init(NULL);
+	return 0;
+}
