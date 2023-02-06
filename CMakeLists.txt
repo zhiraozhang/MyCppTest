@@ -4,4 +4,4 @@ cmake_minimum_required(VERSION 3.10)
 project(mycpp)
 # 指定生成目标
 #aux_source_directory(test SRC_DIR)
-add_executable(mycpp "test/类和对象/friend.cpp")
+add_executable(mycpp "test/类和对象/static.cpp")

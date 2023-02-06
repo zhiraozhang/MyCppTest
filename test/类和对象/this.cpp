@@ -1,27 +1,5 @@
 #include<iostream>
 using namespace std;
-class Person01
-{
-	//只有非静态成员变量才属于类上
-	int m_A;//int占用4个字节
-	static int m_B;//static不属于类对象上
-	//函数也不属于类对象上
-	void func();
-	static void func02();
-};
-
-void test01()
-{
-	Person01 p;
-	//编译器会为每个空对象也分配一个字节，是为了区分空对象占内存的位置
-	cout << "Person 空对象占用的空间为：" << sizeof(p) << endl;
-}
-void test02()
-{
-	Person01 p;
-	//如果类中有数据，
-	cout << "Person 对象占用的空间为：" << sizeof(p) << endl;
-}
 
 //this
 //this指向被调用成员函数 所属的对象
