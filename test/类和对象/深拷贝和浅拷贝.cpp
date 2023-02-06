@@ -24,6 +24,11 @@ public:
 		m_Age = age;
 		cout << "有参构造函数调用。" << endl;
 	}
+	//初始化列表构造
+	Person(int a, int* b, int c) : m_Age(a), m_Height(b), m_Weight(c)
+	{
+		cout << "初始化列表构造函数调用。" << endl;
+	}
 	Person(int age, int height)
 	{
 		m_Age = age;
@@ -48,6 +53,7 @@ public:
 	}
 	int m_Age;
 	int* m_Height;
+	int m_Weight;
 };
 void test(int*& s)
 {
@@ -63,5 +69,10 @@ int main()
 	int* s = NULL;
 	test(s);
 	cout << "s指向的p2.Height为：" << *s << endl;
+
+	//初始化列表方式构造
+	int* height = new int(180);
+	Person p(25, height, 150);
+	cout << p.m_Age <<" "<< *p.m_Height <<" " << p.m_Weight << endl;
 	return 0;
 }
