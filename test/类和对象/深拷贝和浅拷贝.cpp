@@ -10,7 +10,7 @@
 #pragma once
 ================================================================*/
 
-#include<iostream>
+#include <iostream>
 using namespace std;
 class Person
 {
@@ -24,8 +24,8 @@ public:
 		m_Age = age;
 		cout << "有参构造函数调用。" << endl;
 	}
-	//初始化列表构造
-	Person(int a, int* b, int c) : m_Age(a), m_Height(b), m_Weight(c)
+	// 初始化列表构造
+	Person(int a, int *b, int c) : m_Age(a), m_Height(b), m_Weight(c)
 	{
 		cout << "初始化列表构造函数调用。" << endl;
 	}
@@ -35,7 +35,7 @@ public:
 		m_Height = new int(height);
 		cout << "有参构造函数02调用。" << endl;
 	}
-	Person(const Person& p)
+	Person(const Person &p)
 	{
 		m_Age = p.m_Age;
 		m_Height = new int(*p.m_Height);
@@ -43,19 +43,19 @@ public:
 	}
 	~Person()
 	{
-		//如果没有置空操作，类析构之后 下面的s指针也能指到 之前的的数据
-		//if (m_Height != NULL)
+		// 如果没有置空操作，类析构之后 下面的s指针也能指到 之前的的数据
+		// if (m_Height != NULL)
 		//{
 		//	delete m_Height;
 		//	m_Height = NULL;
-		//}
+		// }
 		cout << "析构函数调用。" << endl;
 	}
 	int m_Age;
-	int* m_Height;
+	int *m_Height;
 	int m_Weight;
 };
-void test(int*& s)
+void test(int *&s)
 {
 	Person p1(13, 170);
 	cout << "p1年龄为" << p1.m_Age << "，p1身高为：" << *p1.m_Height << endl;
@@ -66,13 +66,14 @@ void test(int*& s)
 }
 int main()
 {
-	int* s = NULL;
+	int *s = NULL;
 	test(s);
 	cout << "s指向的p2.Height为：" << *s << endl;
 
-	//初始化列表方式构造
-	int* height = new int(180);
+	// 初始化列表方式构造
+	int *height = new int(180);
 	Person p(25, height, 150);
-	cout << p.m_Age <<" "<< *p.m_Height <<" " << p.m_Weight << endl;
+	cout << p.m_Age << " " << *p.m_Height << " " << p.m_Weight << endl;
+	delete height;
 	return 0;
 }
