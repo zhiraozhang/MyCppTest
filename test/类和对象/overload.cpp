@@ -35,6 +35,31 @@ ostream &operator<<(ostream &cout, const Person &p)
 	return cout;
 }
 
+// 递增运算符
+// 前置递增返回引用
+Person &operator++(Person &p)
+{
+	p.m_A += 1;
+	p.m_B += 1;
+	return p;
+}
+// 前置递增局部函数
+//  Person &operator++()
+//  {
+//  	p.m_A += 1;
+//  	p.m_B += 1;
+//  	return p;
+//  }
+//  int代表占位参数，用于区分前置和后置
+//  后置递增返回值
+Person operator++(Person &p, int)
+{
+	Person temp = p;
+	p.m_A += 1;
+	p.m_B += 1;
+	return temp;
+}
+
 void test01()
 {
 	Person p1(10, 40), p2(20, 80), p3;
@@ -42,8 +67,16 @@ void test01()
 	cout << p3 << endl;
 	cout << p1 + p2 + p3 << endl;
 }
+
+void test02()
+{
+	Person p1(0, 0);
+	cout << ++p1 << p1++ << endl;
+	cout << p1 << endl;
+}
 int main()
 {
 	test01();
+	test02();
 	return 0;
 }
