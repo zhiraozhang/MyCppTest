@@ -5,11 +5,11 @@ class Person
 {
 private:
 public:
-    Person();
-    Person(int a, int b) : m_A(a), m_B(b);
-    ~Person();
-    int m_A;
-    int m_B;
+	Person() {};
+	Person(int a, int b) : m_A(a), m_B(b) {};
+	~Person();
+	int m_A;
+	int m_B;
 };
 
 Person::~Person()
@@ -18,39 +18,31 @@ Person::~Person()
 
 // 运算符重载
 // 加法，加减乘除类似
-// Person &operator+(Person &p1, Person &p2)
-// {
-//     Person temp;
-//     temp.m_Age = p1.m_Age + p2.m_Age;
-//     temp.m_B = p1.m_B + p2.m_B;
-//     temp.m_C = p1.m_C + p2.m_C;
-//     return temp;
-// }
-
-Person operator+(Person p1, Person p2) // 全局函数的重载 传两个参数
+Person operator+(Person& p1, Person& p2) // 全局函数的重载 传两个参数
 {
-    Person temp;
-    temp.m_A = p1.m_A + p2.m_A;
-    temp.m_B = p1.m_B + p2.m_B;
-    return temp;
+	Person temp;
+	temp.m_A = p1.m_A + p2.m_A;
+	temp.m_B = p1.m_B + p2.m_B;
+	return temp;
 }
+
 // 左移运算符
-ostream &operator<<(ostream &cout, Person &p)
+ostream& operator<<(ostream& cout, Person& p)
 {
-    cout << p.m_A << endl;
-    cout << p.m_B << endl;
-    return cout;
+	cout << p.m_A << endl;
+	cout << p.m_B << endl;
+	return cout;
 }
 
 void test01()
 {
-    Person p1(10, 45), p2(20, 80), p3;
-    p3 = p1 + p2;
-    cout << p3.m_A << endl;
-    // cout << p1 + p2 + p3 << endl;
+	Person p1(10, 40), p2(20, 80), p3;
+	p3 = p1 + p2;
+	cout << p3 << endl;
+	cout << p1 + p2 + p3 << endl;
 }
 int main()
 {
-    test01();
-    return 0;
+	test01();
+	return 0;
 }
