@@ -5,8 +5,8 @@ class Person
 {
 private:
 public:
-	Person() {};
-	Person(int a, int b) : m_A(a), m_B(b) {};
+	Person(){};
+	Person(int a, int b) : m_A(a), m_B(b){};
 	~Person();
 	int m_A;
 	int m_B;
@@ -18,7 +18,7 @@ Person::~Person()
 
 // 运算符重载
 // 加法，加减乘除类似
-Person operator+(Person& p1, Person& p2) // 全局函数的重载 传两个参数
+Person operator+(const Person &p1, const Person &p2) // 全局函数的重载 传两个参数
 {
 	Person temp;
 	temp.m_A = p1.m_A + p2.m_A;
@@ -27,7 +27,8 @@ Person operator+(Person& p1, Person& p2) // 全局函数的重载 传两个参�
 }
 
 // 左移运算符
-ostream& operator<<(ostream& cout, Person& p)
+// 重载<<时，&Person不加const会报错，why？
+ostream &operator<<(ostream &cout, const Person &p)
 {
 	cout << p.m_A << endl;
 	cout << p.m_B << endl;
