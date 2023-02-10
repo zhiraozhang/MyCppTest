@@ -69,7 +69,7 @@ void test02()
 	// AbstractAnimal a1;
 	// AbstractAnimal *a2 = new AbstractAnimal;
 
-	// 但是，可以用子类实例化抽象类对象
+	// 但是，可以用子类实例化抽象类对象，这样就可以在一个函数中传入父类的参数列表，实际传入子类的形参。
 	AbstractAnimal *a3 = new Dog;
 	a3->speak();
 	doSpeak(*a3);
