@@ -5,7 +5,7 @@
 *   创 建 者：SherlockZhang
 *   邮    箱：SherlockZhang@aliyun.com
 *   创建日期：20231年01月30日
-*   描    述：模板分为函数模板和类模板
+*   描    述：模板分为函数模板和类模板，可以统一使用class T
 *
 #pragma once
 ================================================================*/
@@ -56,14 +56,23 @@ void Printargs(T3... args)
 int main()
 {
 	// 函数模板
-	int a = 33;
-	int b = 22;
+	int a = 1;
+	int b = 2;
 	Swap(a, b);
+	cout << a << " " << b << endl;
+
 	// 类模板
 	Student<int, double> st1("Lily", "female", 25.06, 170.05);
-	// Student<double, int> st2 = new Student<double, int>("Sam", "male", 22.00, 182.00);
 	Student<double, int> st2("Sam", "male", 22.03, 182.20);
+	Student<double, int> *st3 = new Student<double, int>("Jack", "male", 22.50, 177);
 	st1.PrintStu();
 	st2.PrintStu();
+	st3->PrintStu();
+	delete st3;
+	st3 = NULL;
+
+	// 可变参数模板
+	Printargs(a, b);
+	Printargs(a, a, a, b);
 	return 0;
 }
