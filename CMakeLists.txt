@@ -4,4 +4,4 @@ cmake_minimum_required(VERSION 3.10)
 project(mycpp)
 # 指定生成目标
 #aux_source_directory(test SRC_DIR)
-add_executable(mycpp  "test/文件操作/file.cpp")
+add_executable(mycpp  "test/泛型和STL-模板/MyArray.hpp")
