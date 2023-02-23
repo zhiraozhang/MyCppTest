@@ -1,14 +1,14 @@
-/*================================================================
-*     Copyright (c) 2022年 SherlockZhang. All rights reserved.
-*
-*   文件名称：linklist.cpp
-*   创 建 者：SherlockZhang
-*   邮    箱：SherlockZhang@aliyun.com
-*   创建日期：2022年01月28日
-*   描    述：链表
-*
+/**
+ * @file linklist.cpp
+ * @author SherlockZhang@aliyun.com
+ * @brief 链表
+ * @version 0.1
+ * @date 2022-01-28
+ *
+ * @copyright Copyright (c) 2022
+ *
+ */
 #pragma once
-================================================================*/
 #include <iostream>
 
 typedef int DataType;
