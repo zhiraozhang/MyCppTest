@@ -1,3 +1,30 @@
+/**
+ * @file vector.cpp
+ * @author SherlockZhang@aliyun.com
+ * @brief
+ * @version 0.1
+ * @date 2023-02-23
+ *
+ * @copyright Copyright (c) 2023
+ *
+
+ *  * v.capacity()返回容器当前已分配的容量。
+ *  * v.size()
+ *  * v.max_size()
+ *  * v.front()
+ *  * v.back()传回最后一个数据，不检查这个数据是否存在。
+ *  * v.begin()传回迭代器中的第一个数据地址。
+ *
+ *  * assign(beg,end);assign(n,elem)
+ *  * push_back(elem)
+ *  * pop_back()
+ *  * v.clear()移除容器中所有数据。
+ *  * v.empty()判断容器是否为空。
+ *  * v.erase(pos);v.erase(beg,end)
+ *  * v.insert()
+ *  * v.resize(num)
+ *  * v.swap(vector v)
+ */
 #include <iostream>
 #include <vector>
 #include <string>
@@ -25,9 +52,15 @@ void test00()
     for (int i = 0; i < 5; i++)
     {
         // 随机放入5个数
-        vec.push_back(rand());
+        vec.push_back(rand() % 100);
     }
-    cout << "插入5个数之后，vector size = " << vec.size() << endl;
+    cout << "插入5个数之后：" << endl
+         << "vector capacity = " << vec.capacity() << endl
+         << "vector size = " << vec.size() << endl
+         << "vector max_size = " << vec.max_size() << endl
+         << "vector front = " << vec.front() << endl
+         << "vector back = " << vec.back() << endl;
+    //<< "vector begin = " << vec.begin() << endl;
     // 访问向量中的 5 个值
     for (int i = 0; i < 5; i++)
     {
@@ -46,6 +79,7 @@ void test00()
         v++;
     }
 }
+// vector 自定义数据类型
 void test01()
 {
     Person p1("Jack", 18);
