@@ -1,15 +1,13 @@
-/*================================================================
-*     Copyright (c) 2022年 SherlockZhang. All rights reserved.
-*
-*   文件名称：template.cpp
-*   创 建 者：SherlockZhang
-*   邮    箱：SherlockZhang@aliyun.com
-*   创建日期：20231年01月30日
-*   描    述：模板分为函数模板和类模板，可以统一使用class T
-*
-#pragma once
-================================================================*/
-
+/**
+ * @file template.cpp
+ * @author SherlockZhang3 (SherlockZhang@aliyun.com)
+ * @brief 模板分为函数模板和类模板，可以统一使用class T
+ * @version 0.1
+ * @date 2023-02-26
+ *
+ * @copyright Copyright (c) 2023
+ *
+ */
 #include <iostream>
 using namespace std;
 
