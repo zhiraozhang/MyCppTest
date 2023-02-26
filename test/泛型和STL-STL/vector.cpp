@@ -70,13 +70,13 @@ void test00()
     // while
     // for，见test01
     // for_each
-    //  使用迭代器 iterator 访问值，vec.begin()启示迭代器，指向第一个元素。vec.end()结束迭代器，指向容器中最后一个元素的下一个位置
-    vector<size_t>::iterator v = vec.begin();
+    // 使用迭代器 iterator 访问值，vec.begin()启示迭代器，指向第一个元素。vec.end()结束迭代器，指向容器中最后一个元素的下一个位置
+    vector<size_t>::iterator it = vec.begin();
     cout << "while遍历vector" << endl;
-    while (v != vec.end())
+    while (it != vec.end())
     {
-        cout << "value of v = " << *v << endl;
-        v++;
+        cout << "value of it = " << *it << endl;
+        it++;
     }
 }
 // vector 自定义数据类型
