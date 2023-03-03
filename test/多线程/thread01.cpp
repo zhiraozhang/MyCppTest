@@ -15,25 +15,20 @@ void MyPrint()
 {
     cout << "线程开始。" << endl;
 
-    cout << "线程结束1。" << endl;
-    cout << "线程结束2。" << endl;
-    cout << "线程结束3。" << endl;
-    cout << "线程结束4。" << endl;
-    cout << "线程结束5。" << endl;
-    cout << "线程结束5。" << endl;
-    cout << "线程结束7。" << endl;
-    cout << "线程结束8。" << endl;
+    for (size_t i = 0; i < 100; i++)
+    {
+        cout << "线程结束：" << i << endl;
+    }
 }
 int main()
 {
     cout << "主线程开始。" << endl;
     thread th(MyPrint);
-    //th.join();
-    th.detach();
-    cout << "主线程结束1。" << endl;
-    cout << "主线程结束2。" << endl;
-    cout << "主线程结束3。" << endl;
-    cout << "主线程结束4。" << endl;
-    cout << "主线程结束5。" << endl;
+    th.join();
+    // th.detach();
+    for (size_t i = 0; i < 100; i++)
+    {
+        cout << "主线程结束：" << i << endl;
+    }
     return 0;
 }
